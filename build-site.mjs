@@ -54,10 +54,18 @@ if (!appCaseStudies) {
 const appRoot = join(appCaseStudies, "..");
 const theme = readFileSync(join(here, "theme.css"), "utf8");
 const built = [];
+/** The favicon is the application's own icon: the SVG for browsers that
+ *  take one, the Windows .ico (16 to 256 px) for the rest. Linked from
+ *  every full page, relative to the page's depth. */
+const favicons = (rel) => {
+  const up = "../".repeat(rel.split(/[\\/]/).length - 1);
+  return `<link rel="icon" href="${up}favicon.ico" sizes="any">\n<link rel="icon" href="${up}favicon.svg" type="image/svg+xml">\n`;
+};
+const VIEWPORT = `<meta name="viewport" content="width=device-width, initial-scale=1">\n`;
 const write = (rel, html) => {
   const path = join(here, rel);
   mkdirSync(dirname(path), { recursive: true });
-  writeFileSync(path, html);
+  writeFileSync(path, html.includes(VIEWPORT) ? html.replace(VIEWPORT, () => VIEWPORT + favicons(rel)) : html);
   built.push(rel.split("\\").join("/"));
 };
 
