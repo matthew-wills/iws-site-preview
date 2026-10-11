@@ -129,7 +129,9 @@ const header = (prefix, current) =>
     `<header class="top">`,
     `  <div class="wrap">`,
     `    <a class="brand" href="${prefix}index.html" aria-label="${COMPANY}, home">`,
-    `      <svg viewBox="0 0 28 28" aria-hidden="true"><rect x="1" y="1" width="26" height="26" rx="6" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="5" y="7" width="8" height="5" rx="1.5" fill="currentColor" opacity="0.85"/><rect x="15" y="16" width="8" height="5" rx="1.5" fill="currentColor"/><path d="M13 9.5h3.5v9H15" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>`,
+    // The application's own icon (public/app-icon.svg in the app repo), so
+    // the site and the Windows app carry the same mark.
+    `      <svg viewBox="4 6 58 54" aria-hidden="true"><defs><linearGradient id="mark-teal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2BB8CF"/><stop offset="1" stop-color="#1490A8"/></linearGradient></defs><path d="M 18 15 C 30 20 21 30 30 34 C 40 38 34 46 41 50" fill="none" stroke="#0F7C93" stroke-width="3.4" stroke-linecap="round"/><path d="M 37.2 49.4 L 44.4 52.2 L 40.2 45.8 Z" fill="#0F7C93"/><rect x="6" y="8" width="24" height="13" rx="4.5" fill="url(#mark-teal)"/><rect x="20" y="27" width="24" height="13" rx="4.5" fill="url(#mark-teal)" opacity="0.82"/><rect x="36" y="46" width="24" height="12.5" rx="6.25" fill="#FFB92E"/><rect x="36" y="46" width="24" height="12.5" rx="6.25" fill="none" stroke="#E08A00" stroke-width="1.6"/></svg>`,
     `      <span class="brand-text">${COMPANY}<span class="brand-tag">${DESCRIPTOR}</span></span>`,
     `    </a>`,
     `    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5.5h14M3 10h14M3 14.5h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Menu</button>`,

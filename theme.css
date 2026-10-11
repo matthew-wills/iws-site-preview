@@ -61,7 +61,7 @@ p { margin: 0; }
 .top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: rgba(255, 255, 255, 0.94); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); margin-inline: -20px; padding-inline: 20px; }
 .top .wrap { display: flex; align-items: center; gap: 22px; min-height: 56px; flex-wrap: wrap; }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 650; font-size: 1.02rem; color: var(--ink); text-decoration: none; }
-.brand svg { width: 26px; height: 26px; color: var(--accent); }
+.brand svg { width: 32px; height: 32px; flex: none; }
 .brand-text { display: flex; flex-direction: column; line-height: 1.15; }
 .brand-tag { font-size: 0.68rem; font-weight: 500; color: var(--ink-faint); letter-spacing: 0.01em; }
 .nav { display: flex; gap: 4px; flex-wrap: wrap; margin-left: auto; }
